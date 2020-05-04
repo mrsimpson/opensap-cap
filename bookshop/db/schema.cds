@@ -2,6 +2,8 @@ namespace oj.opensapcap.bookshop;
 
 using { Currency, managed } from '@sap/cds/common';
 
+type Place : String(100);
+
 
 entity Books : managed {
     key ID: Integer;
@@ -16,6 +18,10 @@ entity Books : managed {
 entity Authors : managed {
     key ID: Integer;
     name: String(200);
+    dateOfBirth: Date;
+    placeOfBirth: Place;
+    dateOfDeath: Date;
+    placeOfDeath: Place;
     books: Association to many Books on books.author = $self
 }
 
