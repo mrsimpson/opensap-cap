@@ -1,6 +1,6 @@
 namespace oj.opensapcap.bookshop;
 
-using { Currency, managed } from '@sap/cds/common';
+using { cuid, Currency, managed } from '@sap/cds/common';
 
 type Place : String(100);
 
@@ -25,8 +25,7 @@ entity Authors : managed {
     books: Association to many Books on books.author = $self
 }
 
-entity Orders : managed {
-    key ID: UUID;
+entity Orders : managed, cuid {
     orderNo: String @(
         title: '{i18n>Order number}',
         description: '{i18n>Human readable oder number}'
@@ -34,8 +33,7 @@ entity Orders : managed {
     items: Composition of many OrderItems on items.parent = $self;
 }
 
-entity OrderItems : managed {
-    key ID: UUID;
+entity OrderItems : managed, cuid {
     parent: Association to one Orders;
     book: Association to one Books;
     quantity: Integer;
