@@ -1,6 +1,6 @@
-namespace oj.opensapcap;
+namespace oj.opensapcap.bookshop;
 
-using { Currency, managed } from '@sap/cds/commmon';
+using { Currency, managed } from '@sap/cds/common';
 
 
 entity Books : managed {
