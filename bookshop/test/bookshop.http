@@ -12,3 +12,15 @@ Content-Type: application/json
     "title": "Anna Karenina",
     "stock": 10
 }
+
+### insert books via admin service
+POST http://localhost:4004/admin/Books
+Content-Type: application/json
+
+{ 
+    "title": "Anna Karenina",
+    "stock": 10
+}
+
+### remove a book
+DELETE http://localhost:4004/admin/Books/272
