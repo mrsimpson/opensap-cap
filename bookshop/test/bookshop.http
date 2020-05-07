@@ -22,5 +22,8 @@ Content-Type: application/json
     "stock": 10
 }
 
+### find the created book with unknown ID
+GET http://localhost:4004/admin/Books?$filter=title eq 'Anna Karenina'
+
 ### remove a book
 DELETE http://localhost:4004/admin/Books/272
