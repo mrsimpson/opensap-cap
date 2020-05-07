@@ -1,0 +1,25 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run bookshop",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "cwd": "${workspaceFolder}/bookshop",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": ["-n"],
+            "args": [
+                "--",
+                "cds",
+                "run",
+                "--in-memory?"
+              ],
+        }
+    ]
+}
